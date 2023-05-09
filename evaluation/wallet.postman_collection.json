@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "d20dc7b5-787e-4967-9ad3-569d43827c21",
+		"name": "wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "security",
+			"item": [
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"captain\",\r\n    \"password\":\"P@ssword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2021/api/account/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2021",
+							"path": [
+								"api",
+								"account",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"captain\",\r\n    \"password\":\"P@ssword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2021/api/account/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2021",
+							"path": [
+								"api",
+								"account",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2ac49792-a42d-49cd-a686-fa482ca66aa6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2021/api/account/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2021",
+							"path": [
+								"api",
+								"account",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"refresh\":\"69be7430-ede0-42fb-a2bb-16133e2525dd\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2021/api/account/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2021",
+							"path": [
+								"api",
+								"account",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address-module",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "d77214a5-f3c2-4e0e-903a-59cee6fa6d22",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"ADDRESS_EMPLOYEE\",\r\n    \"road\": \"rue aux laines\",\r\n    \"number\": 60,\r\n    \"box\":0,\r\n    \"cp\":\"4800\",\r\n    \"town\":\"verviers\",\r\n    \"country\":\"Belgique\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2021/api/address/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2021",
+							"path": [
+								"api",
+								"address",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "liste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
