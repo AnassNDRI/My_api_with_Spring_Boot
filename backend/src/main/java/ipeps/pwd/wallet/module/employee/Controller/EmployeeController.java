@@ -49,7 +49,7 @@ public class EmployeeController {
     }
 
     /**
-     * cette methode retourne un employee si son identifiant est dans la base de
+     * cette methode retourne un employé si son identifiant est dans la base de
      * donnée sinon elle retourne une fausse ApiResponse avec api error_code
      */
     @GetMapping("/{employee_id}")
